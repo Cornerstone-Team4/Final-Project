@@ -1,3 +1,5 @@
+var number = document.getElementById("num").value;
+
 function checkPrime(inputNumber){
     var flag = true;
     if (inputNumber == 0){
