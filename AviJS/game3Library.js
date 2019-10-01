@@ -71,6 +71,3 @@ function checkRes(symbol){
         document.getElementById("result").innerHTML = "You are correct!";
     }else {document.getElementById("result").innerHTML = "You are wrong.";}
 }
-
-
-checkRes('*');
