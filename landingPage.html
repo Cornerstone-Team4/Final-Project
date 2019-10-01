@@ -13,8 +13,9 @@
         .topHeader {
             font-family: 'Turret Road', cursive;
             width: 100%;
-            margin: -3% auto;
+            margin: -6% auto;
             color: white;
+            font-weight: bold;
             font-family: 'Mansalva', cursive;
             font-size: 3rem;
             animation-name: sally;
@@ -23,20 +24,35 @@
         }
         /* Standard syntax */
         @keyframes sally {
-            0% {background-color: red;}
-            25% {background-color: gold;}
-            50% {background-color: green;}
-            75% {background-color: blue;}
-            100% {background-color: purple;}
+            0% {color: red;}
+            25% {color: gold;}
+            50% {color: green;}
+            75% {color: blue;}
+            100% {color: purple;}
         }
         /* Safari, Opera */
         @-webkit-keyframes sally {
-            0% {background-color: red;}
-            25% {background-color: gold;}
-            50% {background-color: green;}
-            75% {background-color: blue;}
-            100% {background-color: purple;}
+            0% {color: red;}
+            25% {color: gold;}
+            50% {color: green;}
+            75% {color: blue;}
+            100% {color: purple;}
         }
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            25% {opacity: 0;}
+            50% {opacity: 0;}
+            75% {opacity: 0.75;}
+            100% {opacity: 1;}
+        }
+        @-webkit-keyframes fadeIn {
+            0% {opacity: 0;}
+            25% {opacity: 0;}
+            50% {opacity: 0;}
+            75% {opacity: 0.75;}
+            100% {opacity: 1;}
+        }
+
         h1 {
             line-height: 3em;          
         }
@@ -54,16 +70,17 @@
         button {
             background-color: red;
             padding: 20px 30px;
-            margin-bottom: 20%;
             font-size: 2em;
             text-align: center;
             cursor: pointer;
+            border-radius: 50%;
             color: white;
-            margin-left: 80%;
+            margin-left: 70%;
             display: none;
+            font-family: 'Turret Road', cursive;
         }
         button a {
-            font-size: 1.2rem;
+            font-size: 1.2rem;  
         }
         #character {
             position: absolute;
@@ -78,6 +95,9 @@
         }
         .nameCallout {
             position: relative;
+            animation-name: fadeIn; 
+            animation-duration: 7s;
+            
         }
         #callout {
             display: none;
