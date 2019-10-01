@@ -88,28 +88,3 @@ function JoinSequence(input){
     }
     return output;
 }
-
-
-
-var input = [];
-input = BreakdownSequence(12345);
-console.log(input);
-var input2 = JoinSequence(input);
-console.log(input2);
-
-
-
-
-//Test block
-const length = 7;
-var target = RandomNumberGenerator(0,9,length,false);
-var input = [1,2,3,4,5,6,7];
-console.log("target: "+target);
-console.log("input: "+input);
-
-check = CheckHowManyOutOfOrder(target,input,length);
-console.log("out of order: "+check);
-check = CheckHowManyInPosition(target,input,length);
-console.log("in order: "+check);
-check = CheckBestSequence(target,input,length);
-console.log("best sequence: "+check);

@@ -42,7 +42,7 @@
         width: 450px;
         background-repeat: no-repeat;
         background-size: 450px;
-        background-image: url(images/result.png);
+        background-image: url(images/result-streched.png);
         color: white;
     }
     button{
@@ -88,7 +88,7 @@
         border-radius: 12px;
     }
     p{
-        margin-top: 100px;
+        margin-top: 70px;
     }
     </style>
 </head>
@@ -101,11 +101,13 @@
         <input type="text" id="num1" placeholder="First Number" class="n1">
         <input type="text" id="num2" placeholder="Second Number" class="n2">
         <input type="text" id="num3" placeholder="Third number" class="n3">
-        <button>Generate result</button>
+        <button onclick="onClickLottery()">Generate result</button>
     </div>
     <div class="result">
-            <p id="result">Result</p>
+        <p id="result">Result</p>
     </div>
+    <script src="js/lottery.js"></script>
+    <script src="js/integrationLottery.js"></script>
 </div>
 </body>
 </html>
