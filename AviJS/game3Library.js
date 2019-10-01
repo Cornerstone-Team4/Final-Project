@@ -66,3 +66,9 @@ function checkSymbol(){
             break;
     }
 }
+
+function checkRes(){
+    if (checkSymbol()){
+        document.getElementById("result").innerHTML = "You are correct!";
+    }else {document.getElementById("result").innerHTML = "You are wrong.";}
+}
