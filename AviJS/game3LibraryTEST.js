@@ -9,10 +9,10 @@ var answer = parseInt(document.getElementById("result").value);
 =====================*/
 function add(){
     // Input
-var num1 = parseInt(document.getElementById("num1").value);
-var num2 = parseInt(document.getElementById("num2").value);
+var num1 = document.getElementById("num1").value;
+var num2 = document.getElementById("num2").value;
 // Output
-var answer = parseInt(document.getElementById("result").value);
+var answer = document.getElementById("result").value;
 
     if (answer != num1 + num2){
         return false;
@@ -25,11 +25,12 @@ var answer = parseInt(document.getElementById("result").value);
 
 ========================*/
 function subtract(){
-        // Input
-var num1 = parseInt(document.getElementById("num1").value);
-var num2 = parseInt(document.getElementById("num2").value);
+          // Input
+var num1 = document.getElementById("num1").value;
+var num2 = document.getElementById("num2").value;
 // Output
-var answer = parseInt(document.getElementById("result").value);
+var answer = document.getElementById("result").value;
+
     
     if (answer != num1 - num2){
         return false;
@@ -41,11 +42,11 @@ var answer = parseInt(document.getElementById("result").value);
         Multiplication
 ========================*/
 function multiply(){
-        // Input
-var num1 = parseInt(document.getElementById("num1").value);
-var num2 = parseInt(document.getElementById("num2").value);
+     // Input
+var num1 = document.getElementById("num1").value;
+var num2 = document.getElementById("num2").value;
 // Output
-var answer = parseInt(document.getElementById("result").value);
+var answer = document.getElementById("result").value;
 
     if (answer != num1 * num2){
         return false;
@@ -56,12 +57,12 @@ var answer = parseInt(document.getElementById("result").value);
         Division
 ========================*/
 function divide(){
-        // Input
-var num1 = parseInt(document.getElementById("num1").value);
-var num2 = parseInt(document.getElementById("num2").value);
-// Output
-var answer = parseInt(document.getElementById("result").value);
-
+    // Input
+    var num1 = document.getElementById("num1").value;
+    var num2 = document.getElementById("num2").value;
+    // Output
+    var answer = document.getElementById("result").value;
+    
     if (answer != num1 / num2){
         return false;
     }else {return true;
