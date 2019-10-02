@@ -9,7 +9,7 @@
     <style>
         body {
             text-align: center;
-            background-color: rgb(89, 182, 201);
+            background-image: url("/img/gameSlect-bg.jpg");
         }
         .selectSection {
             display: flex;
@@ -18,14 +18,23 @@
         section {
             display: block;
             margin: 3% auto;
+            
         }
         section img {
             width: 95%;
-            opacity: 0.8;
+            
         }
         section img:hover {
-            opacity: 1;
             cursor: pointer;
+            animation: gameselect 1s;
+        }
+        @keyframes gameselect{
+            0%{
+                transform:scale(1,1);
+            }
+            100%{
+                transform:scale(1.2,1.2);
+            }
         }
         h2 {
             font-family: 'Turret Road', cursive;
@@ -33,11 +42,11 @@
         }
         h1 {
             font-family: 'Mansalva', cursive;
-            /* display: none; */
-            font-size: 4em;
-            color: white;
-            -webkit-text-stroke-width: 0.5px;
-            -webkit-text-stroke-color: blue;
+            cursor: pointer;
+            font-size: 3em;
+            color: blueviolet;
+            /* -webkit-text-stroke-width: 0.1px; */
+            /* -webkit-text-stroke-color: white; */
         }
         #game1 {
             position: relative;
@@ -45,17 +54,17 @@
         .game1name {
             position: absolute;
             top: 30%;
-            left: 12%;
+            left: 14%;
         }
         .game2name {
             position: absolute;
             top: 44%;
-            left: 40%;
+            left: 43%;
         }
         .game3name {
             position: absolute;
             top: 44%;
-            left: 67%;
+            left: 70%;
         }
         .title {
             margin-top: 3%;

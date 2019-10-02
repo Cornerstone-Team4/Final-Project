@@ -9,6 +9,8 @@
     <style>
         body {  
             text-align: center;
+            background: url("/img/landingPage-bg.jpg");
+            background-image: cover;
         }
         .topHeader {
             font-family: 'Turret Road', cursive;
@@ -19,37 +21,33 @@
             font-family: 'Mansalva', cursive;
             font-size: 3rem;
             animation-name: sally;
-            animation-duration: 7s;
+            animation-duration: 2s;
             animation-iteration-count: infinite;
         }
         /* Standard syntax */
         @keyframes sally {
-            0% {color: red;}
-            25% {color: gold;}
-            50% {color: green;}
-            75% {color: blue;}
-            100% {color: purple;}
+            0% {color: white;}
+            25% {color: rgb(207, 164, 248);}
+            50% {color: white;}
+            75% {color: pink;}
+            100% {color: white;}
         }
         /* Safari, Opera */
         @-webkit-keyframes sally {
-            0% {color: red;}
-            25% {color: gold;}
-            50% {color: green;}
-            75% {color: blue;}
-            100% {color: purple;}
+            0% {color: white;}
+            25% {color: rgb(207, 164, 248);}
+            50% {color: white;}
+            75% {color: pink;}
+            100% {color: white;}
         }
         @keyframes fadeIn {
-            0% {opacity: 0;}
-            25% {opacity: 0;}
-            50% {opacity: 0;}
-            75% {opacity: 0.9;}
+            0% {opacity: 0;}    
+            50% {opacity: 0.5;}    
             100% {opacity: 1;}
         }
         @-webkit-keyframes fadeIn {
-            0% {opacity: 0;}
-            25% {opacity: 0;}
-            50% {opacity: 0;}
-            75% {opacity: 0.9;}
+            0% {opacity: 0;} 
+            50% {opacity: 0.5;}      
             100% {opacity: 1;}
         }
 
@@ -61,6 +59,7 @@
         }
         .topBody {
             font-family: 'Turret Road', cursive;
+            
         }
         input {
             font-size: 1.3rem;
@@ -68,13 +67,13 @@
             margin-top: 1.5%;
         }
         button {
-            background-color: red;
+            background-color: white;
             padding: 20px 30px;
             font-size: 2em;
             text-align: center;
             cursor: pointer;
             border-radius: 50%;
-            color: white;
+            color: blue;
             margin-left: 70%;
             display: none;
             font-family: 'Turret Road', cursive;
@@ -82,12 +81,15 @@
         button a {
             font-size: 1.2rem;  
         }
+        button:hover {
+            transform: scale(1.2);
+        }
         #character {
             position: absolute;
             top: 50%;
             left: -20%;
             rotate: -30deg;
-            transition: 1s ease-in;
+            transition: 0.5s;
             animation-fill-mode: forwards;
         }
         #character img {
@@ -96,7 +98,7 @@
         .nameCallout {
             position: relative;
             animation-name: fadeIn; 
-            animation-duration: 10s;
+            animation-duration: 5s;
             
         }
         #callout {
@@ -104,7 +106,6 @@
         }
         #callout img {
             width: 300px;
-            transition: 1.5s;
         }
         #output {
             position: absolute;
