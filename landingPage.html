@@ -158,12 +158,14 @@
             }
 
         function enter(){
+            if(event.keyCode == 13) {
             var name = document.getElementById("name").value;
             document.getElementById("output").innerHTML = "Hello, " + name + " !";
             myMove();
             document.getElementById("callout").style.display = "block";
             document.getElementById("name").style.display = "none";
             document.getElementById("startbutton").style.display = "block";
+            }   
         };
     </script>
 </body>
