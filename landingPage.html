@@ -9,34 +9,48 @@
     <style>
         body {  
             text-align: center;
+            background: url("/img/landingPage-bg.jpg");
+            background-image: cover;
         }
         .topHeader {
             font-family: 'Turret Road', cursive;
             width: 100%;
-            margin: -3% auto;
+            margin: -6% auto;
             color: white;
+            font-weight: bold;
             font-family: 'Mansalva', cursive;
             font-size: 3rem;
             animation-name: sally;
-            animation-duration: 7s;
+            animation-duration: 2s;
             animation-iteration-count: infinite;
         }
         /* Standard syntax */
         @keyframes sally {
-            0% {background-color: red;}
-            25% {background-color: gold;}
-            50% {background-color: green;}
-            75% {background-color: blue;}
-            100% {background-color: purple;}
+            0% {color: white;}
+            25% {color: pink;}
+            50% {color: white;}
+            75% {color: yellow;}
+            100% {color: white;}
         }
         /* Safari, Opera */
         @-webkit-keyframes sally {
-            0% {background-color: red;}
-            25% {background-color: gold;}
-            50% {background-color: green;}
-            75% {background-color: blue;}
-            100% {background-color: purple;}
+            0% {color: white;}
+            25% {color: pink;}
+            50% {color: white;}
+            75% {color: yellow;}
+            100% {color: white;}
         }
+        @keyframes fadeIn {
+            0% {opacity: 0;}    
+            50% {opacity: 0.5;}    
+            100% {opacity: 1;}
+        }
+        @-webkit-keyframes fadeIn {
+            0% {opacity: 0;} 
+            50% {opacity: 0.5;}      
+            100% {opacity: 1;}
+        }
+
         h1 {
             line-height: 3em;          
         }
@@ -45,6 +59,7 @@
         }
         .topBody {
             font-family: 'Turret Road', cursive;
+            
         }
         input {
             font-size: 1.3rem;
@@ -52,25 +67,30 @@
             margin-top: 1.5%;
         }
         button {
-            background-color: red;
+            background-color: white;
             padding: 20px 30px;
-            margin-bottom: 20%;
-            font-size: 2em;
-            text-align: center;
             cursor: pointer;
-            color: white;
-            margin-left: 80%;
+            border-radius: 50%; 
+            margin-left: 70%;
             display: none;
+            font-family: 'Turret Road', cursive;
         }
         button a {
-            font-size: 1.2rem;
+            font-size: 1.2rem;  
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+            color: blue;
+        }
+        button:hover {
+            transform: scale(1.2);
         }
         #character {
             position: absolute;
             top: 50%;
-            left: -20%;
+            left: -16%;
             rotate: -30deg;
-            transition: 1s ease-in;
+            transition: 0.5s;
             animation-fill-mode: forwards;
         }
         #character img {
@@ -78,13 +98,15 @@
         }
         .nameCallout {
             position: relative;
+            animation-name: fadeIn; 
+            animation-duration: 5s;
+            
         }
         #callout {
             display: none;
         }
         #callout img {
             width: 300px;
-            transition: 1.5s;
         }
         #output {
             position: absolute;
@@ -108,7 +130,11 @@
             <div id="callout">
             <img src="img/callout.png">
             </div>
-            <button id="startbutton">Click to start</button> 
+            <button id="startbutton">
+                <a href="/gameSelectPage.html">
+                Click to start
+                </a>
+            </button> 
         </div>
         
         <div id="character">
@@ -132,12 +158,14 @@
             }
 
         function enter(){
+            if(event.keyCode == 13) {
             var name = document.getElementById("name").value;
             document.getElementById("output").innerHTML = "Hello, " + name + " !";
             myMove();
             document.getElementById("callout").style.display = "block";
             document.getElementById("name").style.display = "none";
             document.getElementById("startbutton").style.display = "block";
+            }   
         };
     </script>
 </body>
