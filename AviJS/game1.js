@@ -1,6 +1,6 @@
 
 function checkPrime(){
-    var inputNumber = document.getElementsByClassName("result").value;
+    var inputNumber = document.getElementById("num").value;
     var flag = true;
     if (inputNumber == 0){
         flag = false;
@@ -21,7 +21,4 @@ function checkPrime(){
     // console.log(flag)
     return flag;
 }
-// var prime = checkPrime();
-// console.log(checkPrime(num)+ " this is the num "+ num);
-// var result = document.getElementById("result").innerHTML
-// var prime = checkPrime(number);
+
