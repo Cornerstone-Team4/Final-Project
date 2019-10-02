@@ -69,17 +69,18 @@
         button {
             background-color: white;
             padding: 20px 30px;
-            font-size: 2em;
-            text-align: center;
             cursor: pointer;
-            border-radius: 50%;
-            color: blue;
+            border-radius: 50%; 
             margin-left: 70%;
             display: none;
             font-family: 'Turret Road', cursive;
         }
         button a {
             font-size: 1.2rem;  
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+            color: blue;
         }
         button:hover {
             transform: scale(1.2);
@@ -87,7 +88,7 @@
         #character {
             position: absolute;
             top: 50%;
-            left: -20%;
+            left: -16%;
             rotate: -30deg;
             transition: 0.5s;
             animation-fill-mode: forwards;
@@ -129,7 +130,11 @@
             <div id="callout">
             <img src="img/callout.png">
             </div>
-            <button id="startbutton">Click to start</button> 
+            <button id="startbutton">
+                <a href="/gameSelectPage.html">
+                Click to start
+                </a>
+            </button> 
         </div>
         
         <div id="character">
