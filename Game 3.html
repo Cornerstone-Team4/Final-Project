@@ -45,7 +45,7 @@
         background-image: url(images/result-streched.png);
         color: white;
     }
-    button{
+    button.action{
         font-family: 'Mansalva', cursive;
         margin-top: 10px;
         color: rgb(61, 184, 24);
@@ -54,10 +54,28 @@
         border: none;
         border-radius: 12px;
     }
-    button:hover{
+    div.button{
+        margin-top: 500px;
+        margin-left: 50px;
+    }
+    button.back{
+        font-family: 'Mansalva', cursive;
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        background-color: rgb(255, 255, 255);
+        border-color: black;
+        border-radius: 12px;
+    }
+    button.action:hover{
         transition-duration: .5s;
         background-color: rgb(61, 184, 24);
         color: rgb(11, 101, 119);
+    }
+    button.back:hover{
+        transition-duration: .5s;
+        background-color: black;
+        border-color: red;
+        color: red;
     }
     input.n1{
         border:none;
@@ -101,12 +119,17 @@
         <input type="text" id="num1" placeholder="First Number" class="n1">
         <input type="text" id="num2" placeholder="Second Number" class="n2">
         <input type="text" id="num3" placeholder="Third number" class="n3">
-        <button onclick="onClickLottery()">Generate result</button>
+        <button class="action" onclick="onClickLottery()">Generate result</button>
     </div>
     <div class="result">
         <p id="result">Result</p>
     </div>
     <script src="js/lottery.js"></script>
 </div>
+<div class="button">
+        <button class="back">
+            <a href="/gameSelectPage.html">Return!</a>
+        </button>
+    </div>
 </body>
 </html>
